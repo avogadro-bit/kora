@@ -1,4 +1,12 @@
-# Third-party components in the macOS application
+# Third-party components in the desktop applications
+
+Windows downloads have matching `Third-Party-Notices-Windows.zip` and
+`Dependency-Sources-Windows.zip` archives. The Windows package contains its notices
+under `_internal/Third-Party-Notices`. Windows uses pywebview, pythonnet, clr_loader
+and Microsoft WebView2 instead of the macOS Cocoa bindings; the archives contain
+the installed package versions and their license texts. WebView2 Runtime is
+installed separately under Microsoft's terms. The macOS-specific paths and
+code-signing instructions below apply only to the macOS build.
 
 KŌRA is independent of Fujifilm. Official LUTs, camera firmware,
 photographs and proprietary ICC profiles are not distributed with this app.
