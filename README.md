@@ -1,11 +1,12 @@
-# Film Recipe Lab — public beta
+# KŌRA — public beta
 
 A local RAW photo editor for exploring film-inspired looks, with individual and
 group adjustments, source-resolution detail, and JPEG/TIFF export.
+A quiet, photograph-first workspace. Formerly Film Recipe Lab.
 
 This project is developed with the help of AI coding tools.
 
-**[Download the macOS beta](https://github.com/avogadro-bit/film-recipe-lab-downloads/releases/tag/v0.2.7)**
+**[Download KŌRA 0.2.21 for macOS](https://github.com/avogadro-bit/kora/releases/tag/v0.2.21)**
 
 **Requirements:** Apple Silicon Mac (M1 or newer), macOS 14 or later.
 Python is included. This beta is not Apple-notarized. No Windows or Intel Mac
@@ -13,9 +14,10 @@ executable is available in this release.
 
 ## Start editing
 
-1. Download `Film-Recipe-Lab-0.2.7-macOS-arm64.dmg` from the release assets.
-2. Copy Film Recipe Lab to Applications and launch it. The editor opens in your
-   default browser and runs on your computer.
+1. Download `Kora-0.2.21-macOS-arm64.dmg` from the release assets.
+2. Copy **KŌRA** to Applications and launch it. The editor opens in its own
+   macOS window, in full screen by default, and runs locally on your computer.
+   Quit the old Film Recipe Lab app before installing; launch KŌRA afterward.
 3. In **Setup**, follow **Download from Fujifilm** to obtain the official
    **GFX ETERNA 55 v1.10** LUT pack and review Fujifilm's terms.
 4. Use **Choose Downloaded ZIP** or **Choose Extracted Folder**. The application
@@ -38,6 +40,8 @@ Original photo files are read in place; exports are separate files.
 - Multi-photo selection, shared adjustments and batch JPEG export.
 - Zoomable preview and source-resolution detail; lens corrections where supported.
 - Expandable folder tree and compact, resizable viewer panels.
+- A folder-based recipe library and seven local recipe slots.
+- Colored white balance axes and persistent error logs for troubleshooting.
 
 ## Beta limitations
 
@@ -56,7 +60,7 @@ portable choice. Please treat this as software for evaluation and report issues.
 
 ## Feedback
 
-[Report a bug or suggestion](https://github.com/avogadro-bit/film-recipe-lab-downloads/issues/new/choose).
+[Report a bug or suggestion](https://github.com/avogadro-bit/kora/issues/new/choose).
 Include the app version, macOS version, Mac model, camera/RAW format, steps to
 reproduce, and expected versus actual behavior. Attach screenshots or sample
 photos only if you want them publicly visible and have permission to share them.
@@ -65,7 +69,7 @@ Never post private photographs or a local session URL containing `#session=`.
 ## Licenses and source components
 
 This repository hosts public downloads and documentation; the development
-repository is separate. Original Film Recipe Lab code is MIT-licensed; third-party
+repository is separate. Original KŌRA code is MIT-licensed; third-party
 components retain their respective licenses.
 
 The release includes **Third-Party-Notices.zip** and **Dependency-Sources.zip**.

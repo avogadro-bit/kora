@@ -1,4 +1,25 @@
-# Film Recipe Lab 0.2.7 — public beta
+# KŌRA 0.2.21 — public beta
+
+Film Recipe Lab is now KŌRA. For Apple Silicon Macs running macOS 14 or later.
+
+- Quiet graphite interface, updated icon, full-screen launch and more image space.
+- RAW and JPEG export optimizations, including grain processing.
+- Highlight rendering fixes and improved source-detail handling.
+- Persistent error logging and a folder-based JSON recipe menu.
+- Directional colors in white balance controls.
+- Only ten official-LUT simulations are selectable; legacy recipes retain their rendering.
+- Removed the unavailable Lens Modulation Optimizer and Multi-exposure HDR controls.
+
+Download **Kora-0.2.21-macOS-arm64.dmg** from the
+[release page](https://github.com/avogadro-bit/kora/releases/tag/v0.2.21).
+Quit the old app first, install KŌRA in Applications, and launch KŌRA.
+Installed LUTs and preferences retain their existing storage locations.
+
+192 Python tests pass, along with JavaScript syntax and film-menu checks.
+The DMG and release-file checksums were verified locally.
+This remains an evaluation beta, not Apple-notarized or a camera-calibrated Fuji engine.
+
+## Previous release: Film Recipe Lab 0.2.7 — public beta
 
 For Apple Silicon Macs running macOS 14 or later.
 

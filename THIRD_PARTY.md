@@ -1,6 +1,6 @@
 # Third-party components in the macOS application
 
-Film Recipe Lab is independent of Fujifilm. Official LUTs, camera firmware,
+KŌRA is independent of Fujifilm. Official LUTs, camera firmware,
 photographs and proprietary ICC profiles are not distributed with this app.
 The LUT installer downloads nothing automatically: users obtain the official
 archive from Fujifilm and install their own copy.
@@ -9,7 +9,7 @@ The executable bundles Python and third-party libraries. Their original
 copyright and license texts are supplied in this directory, together with a
 version inventory. These licenses continue to govern their respective components.
 No additional restriction on modifying, replacing or reverse engineering these
-components for debugging such modifications is imposed by Film Recipe Lab.
+components for debugging such modifications is imposed by KŌRA.
 
 ## Components and attribution
 
@@ -36,7 +36,7 @@ components for debugging such modifications is imposed by Film Recipe Lab.
 ## Corresponding sources and replacement
 
 The public beta release provides `Dependency-Sources.zip` at
-https://github.com/avogadro-bit/film-recipe-lab-downloads/releases.
+https://github.com/avogadro-bit/kora/releases.
 It contains the matching upstream LibRaw, rawpy, Lensfun, lensfunpy, GLib,
 gettext, PCRE2, libffi, libjpeg-turbo, JasPer and Little CMS source archives.
 `inventory.json` records revisions, original URLs and SHA-256 checksums.
@@ -50,8 +50,8 @@ Native libraries are separate files in the app's `Contents/Frameworks` directory
 (including rawpy and lensfunpy subdirectories); Python extensions can likewise
 be replaced with ABI-compatible builds for the Python version in the inventory.
 Replacing a signed file requires locally re-signing the modified app, for example
-`codesign --force --deep --sign - "Film Recipe Lab.app"`.
+`codesign --force --deep --sign - "KŌRA.app"`.
 The application contains no license check preventing such replacement.
 
-The original Film Recipe Lab code is MIT-licensed. That license does not replace
+The original KŌRA code is MIT-licensed. That license does not replace
 the licenses of the components above or grant rights to Fujifilm assets.
