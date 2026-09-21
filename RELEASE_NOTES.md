@@ -2,14 +2,6 @@
 
 Film Recipe Lab is now KŌRA. For Apple Silicon Macs running macOS 14 or later.
 
-A Windows 10/11 x64 portable beta is now available as
-`Kora-0.2.21-Windows-x64.zip`. Extract the entire ZIP and launch `Kora.exe`.
-Requires WebView2 and .NET Framework 4.8; Python is included. The build is unsigned.
-The packaged server and actual WebView2 window passed automated Windows checks;
-the test suite passed with 21 skips out of 200. Real-photo testing on user PCs
-remains necessary. Windows-specific license/source archives and checksums are
-included alongside the download.
-
 - Quiet graphite interface, updated icon, full-screen launch and more image space.
 - RAW and JPEG export optimizations, including grain processing.
 - Highlight rendering fixes and improved source-detail handling.

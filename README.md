@@ -8,29 +8,9 @@ This project is developed with the help of AI coding tools.
 
 **[Download KŌRA 0.2.21 for macOS](https://github.com/avogadro-bit/kora/releases/tag/v0.2.21)**
 
-**[Download KŌRA 0.2.21 for Windows x64](https://github.com/avogadro-bit/kora/releases/download/v0.2.21/Kora-0.2.21-Windows-x64.zip)**
-
-**macOS:** Apple Silicon Mac (M1 or newer), macOS 14 or later. Not Apple-notarized.
-**Windows:** Windows 10/11 x64 (Intel/AMD), .NET Framework 4.8 and
-[Microsoft Edge WebView2 Runtime](https://developer.microsoft.com/microsoft-edge/webview2/).
-The Windows build is unsigned. Python is included on both platforms.
-No native Windows ARM64 or Intel Mac build is available.
-
-## Windows installation
-
-Download `Kora-0.2.21-Windows-x64.zip`, extract the **entire** ZIP, then launch
-`Kora.exe`. Keep the `_internal` folder beside the executable. Do not run it from
-inside the ZIP. Install the official LUTs through Setup as described below.
-The app opens full screen; its fullscreen button returns to a normal window.
-
-Windows data is stored in `%LOCALAPPDATA%\Kora`: `luts` for LUTs, `WebView` for
-preferences and `Logs\errors.jsonl` for diagnostics. Make cloud photos available
-offline before opening them. Adobe RGB export needs an installed Adobe RGB ICC
-profile; sRGB needs no extra profile.
-
-This first Windows beta was compiled on Windows and passed automated server and
-WebView2 window checks. Its 200-test suite passed with 21 skips (including tests
-requiring external LUTs). Real-photo workflow testing on user PCs is still needed.
+**Requirements:** Apple Silicon Mac (M1 or newer), macOS 14 or later.
+Python is included. This beta is not Apple-notarized.
+Only the macOS Apple Silicon build is currently distributed here.
 
 ## Start editing on macOS
 
@@ -93,8 +73,6 @@ repository is separate. Original KŌRA code is MIT-licensed; third-party
 components retain their respective licenses.
 
 The release includes **Third-Party-Notices.zip** and **Dependency-Sources.zip**.
-Windows has separate archives with the `-Windows` suffix and
-`SHA256SUMS-Windows.txt`; use the notices and sources matching your platform.
 Notices are also inside the app at `Contents/Resources/Third-Party-Notices`.
 See [third-party notices](THIRD_PARTY.md) for attribution, source availability and
 library replacement information. Official LUTs and firmware are not redistributed.
