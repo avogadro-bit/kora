@@ -1,4 +1,68 @@
-# KŌRA 0.2.21 — public beta
+# KŌRA 0.2.43 — public beta
+
+This beta provides separate **Apple Silicon**, **Intel Mac** and **Windows x64**
+packages. It also adds experimental Kodachrome 64 alongside the Fujifilm looks.
+
+Get the [0.2.43 release](https://github.com/avogadro-bit/kora/releases/tag/v0.2.43)
+or the [matching source code](https://github.com/avogadro-bit/kora-source/tree/v0.2.43).
+Quit the old version before replacing it. Installed LUTs and preferences retain
+their existing locations. Fujifilm LUTs remain a separate installation through
+Setup; Kodachrome data is included.
+
+## Performance and portability
+
+- Reuse the reduced RAW buffer across adjustments. In six local trials on a
+  60.5 MP DNG, median 1800-pixel Kodachrome preview calculation fell from **276 ms
+  to 124 ms**, with identical decoded JPEG pixels. This is a warm-preview result:
+  the RAW was already loaded, and the first RAW decode is not accelerated.
+- Bound concurrent batch exports and release JPEG results once written to the ZIP.
+  A 32-image, two-worker test retained at most two JPEG results instead of 32;
+  this is not a measurement of total RAW-processing memory.
+- Cache repeated metadata reads, invalidate them when the file or selected tool
+  changes, and pass Windows photo paths to ExifTool as UTF-8.
+- Detect optional Windows ExifTool beside the app or under the user's Kora tools
+  directory, without requiring a PATH change. ExifTool is not bundled.
+- Build and audit each architecture separately, including model integrity,
+  essential resources, native library architecture and macOS deployment targets.
+- Compile the Intel RAW engine from verified sources with the same RAW codec
+  features enabled as the Apple Silicon build.
+
+## Requirements and actual checks
+
+Both Mac packages require **macOS 14 or later**. The Windows x64 target is
+**Windows 10 22H2 or Windows 11**, with **WebView2 Evergreen Runtime and .NET
+Framework 4.8**. Windows 11 ARM runs this package through x64 emulation. Python
+is bundled on all platforms. macOS 12/13 and Windows 10 ARM are not targets.
+
+- **Mac:** Apple Silicon native and Intel under Rosetta, on macOS 27 / M4 Max.
+  After relocation to Unicode paths, both packaged local services produced a
+  Kodachrome preview, detail tile and full-resolution 60.5 MP JPEG with an ICC
+  profile, without Fujifilm LUTs. Original RAW checksums remained unchanged.
+  This did not test the native Mac window. Audits passed for 139 ARM and 156 Intel
+  native components, with a maximum declared macOS requirement of 14.0.
+- **Windows:** x64 package in Windows 11 ARM64 (build 26300), using x64 emulation.
+  The relocated application passed its actual WebView2 window check, Unicode
+  paths, Provia/Classic Negative/Pro Neg Hi/Kodachrome previews, detail and JPEG
+  export with an ICC profile. Its audit passed for 126 native components.
+- **Automated checks:** the Mac suite passed 311 Python and 17 JavaScript tests;
+  nine portability tests passed after the final fixes. The Windows suite ran
+  311 tests: 285 passed and 26 skipped because Fuji assets were absent. A later
+  packaged test used verified official LUTs temporarily to exercise those films.
+
+Windows 10, an actual macOS 14 installation, a physical Intel Mac and a physical
+Intel/AMD Windows PC remain untested. CI workflows are configured but no CI pass
+is claimed for this release. The [portability report](https://github.com/avogadro-bit/kora-source/blob/v0.2.43/docs/PORTABILITY.md)
+documents the test scope and remaining checks.
+
+This remains an evaluation beta. The Mac apps are ad-hoc signed and not
+Apple-notarized; the Windows app has no publisher signature. Kodachrome is an
+experimental reconstruction, not a validated match to physical film, and the
+Fuji adaptation is not a camera-calibrated reproduction of camera JPEG output.
+
+Platform-specific notice and dependency-source ZIPs accompany the applications.
+See [third-party information](THIRD_PARTY.md) and `SHA256SUMS.txt` in the release.
+
+## Previous release: KŌRA 0.2.21 — public beta
 
 Film Recipe Lab is now KŌRA. For Apple Silicon Macs running macOS 14 or later.
 
